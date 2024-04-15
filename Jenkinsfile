@@ -1,9 +1,10 @@
 pipeline {
-    agent any
+    agent {label 'slave5'}
     stages {
         stage('Checkout') {
             steps {
-                echo 'Hello World'
+                sh "rm -rf hello-world-war"
+                sh "git clone https://github.com/pooja4423/hello-world-war.git"
             }
         }
     }
