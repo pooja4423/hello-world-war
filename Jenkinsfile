@@ -12,5 +12,6 @@ pipeline {
                 sh "git clone https://github.com/pooja4423/hello-world-war.git"
             }
         }
+        
     }
 }
