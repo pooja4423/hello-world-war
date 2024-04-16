@@ -14,7 +14,7 @@ pipeline {
         }
        stage('build') {
         steps{
-                sh "mvn not found"
+                sh "mvn clean package"
             }
         } 
     }
