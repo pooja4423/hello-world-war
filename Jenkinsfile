@@ -1,3 +1,17 @@
+ properties([
+                        parameters([
+                            choice(
+                                choices: ['package', 'compile'], 
+                                name: 'arg'
+                            ),
+                            string(
+                                defaultValue: 'clean', 
+                                name: 'version', 
+                                trim: true
+                            )
+                        ])
+                    ])
+
 pipeline {
     agent any
     stages {
@@ -14,7 +28,7 @@ pipeline {
         }
        stage('build') {
         steps{
-                sh "mvn clean package"
+                sh "mvn $version $arg"
             }
         } 
     }
