@@ -12,6 +12,10 @@ pipeline {
                 sh "git clone https://github.com/pooja4423/hello-world-war.git"
             }
         }
-        
+       stage('build') {
+        steps{
+                sh "mvn not found"
+            }
+        } 
     }
 }
