@@ -1,17 +1,3 @@
- properties([
-                        parameters([
-                            choice(
-                                choices: ['package', 'compile'], 
-                                name: 'arg'
-                            ),
-                            string(
-                                defaultValue: 'clean', 
-                                name: 'version', 
-                                trim: true
-                            )
-                        ])
-                    ])
-
 pipeline {
     agent any
     stages {
@@ -33,3 +19,4 @@ pipeline {
         } 
     }
 }
+
